@@ -22,7 +22,6 @@ class customBigButton: UIButton {
         backgroundColor = .white
         setTitleColor(UIColor.black, for: .normal)
         titleLabel?.font = UIFont(name: "LexendTera-Light", size: 18)
-        setImage(UIImage(imageLiteralResourceName: "arrow"), for: .normal)
         semanticContentAttribute = .forceRightToLeft
         layer.cornerRadius = 10
         

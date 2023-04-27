@@ -9,23 +9,47 @@
 /* Begin PBXBuildFile section */
 		5A4B7DB529F3A9A200CFB271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DB429F3A9A200CFB271 /* AppDelegate.swift */; };
 		5A4B7DB729F3A9A200CFB271 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DB629F3A9A200CFB271 /* SceneDelegate.swift */; };
-		5A4B7DB929F3A9A200CFB271 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DB829F3A9A200CFB271 /* ViewController.swift */; };
-		5A4B7DBC29F3A9A200CFB271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7DBA29F3A9A200CFB271 /* Main.storyboard */; };
+		5A4B7DB929F3A9A200CFB271 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DB829F3A9A200CFB271 /* LoginViewController.swift */; };
 		5A4B7DBF29F3A9A200CFB271 /* PlankImprover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DBD29F3A9A200CFB271 /* PlankImprover.xcdatamodeld */; };
 		5A4B7DC129F3A9A400CFB271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7DC029F3A9A400CFB271 /* Assets.xcassets */; };
 		5A4B7DC429F3A9A400CFB271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7DC229F3A9A400CFB271 /* LaunchScreen.storyboard */; };
+		5A4B7DCC29F3ABE600CFB271 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DCB29F3ABE600CFB271 /* LaunchViewController.swift */; };
+		5A4B7DD029F3BC7F00CFB271 /* LexendTera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7DCF29F3BC7F00CFB271 /* LexendTera.ttf */; };
+		5A4B7DD329F3E2B400CFB271 /* customBigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DD229F3E2B400CFB271 /* customBigButton.swift */; };
+		5A4B7DD529F3F32900CFB271 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DD429F3F32900CFB271 /* LoginTextField.swift */; };
+		5A4B7DD829F448B300CFB271 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7DD729F448B300CFB271 /* GoogleService-Info.plist */; };
+		5A4B7DE829F4D83300CFB271 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DE729F4D83300CFB271 /* FirebaseAuth.swift */; };
+		5A4B7DEC29F4E63F00CFB271 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5A4B7DEB29F4E63F00CFB271 /* FirebaseAuth */; };
+		5A4B7DEE29F4E63F00CFB271 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5A4B7DED29F4E63F00CFB271 /* FirebaseDatabase */; };
+		5A4B7DF129F4E68700CFB271 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5A4B7DF029F4E68700CFB271 /* GoogleSignIn */; };
+		5A4B7DF329F4E68700CFB271 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5A4B7DF229F4E68700CFB271 /* GoogleSignInSwift */; };
+		5A4B7DF629F534D600CFB271 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DF529F534D600CFB271 /* TimerViewController.swift */; };
+		5A4B7DF829F5587100CFB271 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DF729F5587100CFB271 /* CircularProgressBar.swift */; };
+		5A4B7E2129F6FF7400CFB271 /* DaysCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2029F6FF7400CFB271 /* DaysCollectionViewController.swift */; };
+		5A4B7E2329F77D2300CFB271 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2229F77D2300CFB271 /* DayCollectionViewCell.swift */; };
+		5A4B7E2929FA424000CFB271 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2829FA424000CFB271 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A4B7DB129F3A9A200CFB271 /* PlankImprover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlankImprover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4B7DB429F3A9A200CFB271 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A4B7DB629F3A9A200CFB271 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5A4B7DB829F3A9A200CFB271 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5A4B7DBB29F3A9A200CFB271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A4B7DB829F3A9A200CFB271 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A4B7DBE29F3A9A200CFB271 /* PlankImprover.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlankImprover.xcdatamodel; sourceTree = "<group>"; };
 		5A4B7DC029F3A9A400CFB271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A4B7DC329F3A9A400CFB271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A4B7DC529F3A9A400CFB271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A4B7DCB29F3ABE600CFB271 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		5A4B7DCF29F3BC7F00CFB271 /* LexendTera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LexendTera.ttf; sourceTree = "<group>"; };
+		5A4B7DD229F3E2B400CFB271 /* customBigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customBigButton.swift; sourceTree = "<group>"; };
+		5A4B7DD429F3F32900CFB271 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		5A4B7DD729F448B300CFB271 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A4B7DE729F4D83300CFB271 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		5A4B7DF529F534D600CFB271 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		5A4B7DF729F5587100CFB271 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		5A4B7E2029F6FF7400CFB271 /* DaysCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysCollectionViewController.swift; sourceTree = "<group>"; };
+		5A4B7E2229F77D2300CFB271 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A4B7E2829FA424000CFB271 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4B7DEE29F4E63F00CFB271 /* FirebaseDatabase in Frameworks */,
+				5A4B7DEC29F4E63F00CFB271 /* FirebaseAuth in Frameworks */,
+				5A4B7DF129F4E68700CFB271 /* GoogleSignIn in Frameworks */,
+				5A4B7DF329F4E68700CFB271 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +86,66 @@
 		5A4B7DB329F3A9A200CFB271 /* PlankImprover */ = {
 			isa = PBXGroup;
 			children = (
+				5A4B7DD129F3E27600CFB271 /* CustomElements */,
+				5A4B7DCD29F3B8FD00CFB271 /* Font */,
 				5A4B7DB429F3A9A200CFB271 /* AppDelegate.swift */,
 				5A4B7DB629F3A9A200CFB271 /* SceneDelegate.swift */,
-				5A4B7DB829F3A9A200CFB271 /* ViewController.swift */,
-				5A4B7DBA29F3A9A200CFB271 /* Main.storyboard */,
+				5A4B7DD629F446F700CFB271 /* Controllers */,
+				5A4B7E2729F7A16300CFB271 /* Models */,
 				5A4B7DC029F3A9A400CFB271 /* Assets.xcassets */,
+				5A4B7E2829FA424000CFB271 /* Errors.swift */,
+				5A4B7DE929F4D84100CFB271 /* Firebase */,
 				5A4B7DC229F3A9A400CFB271 /* LaunchScreen.storyboard */,
 				5A4B7DC529F3A9A400CFB271 /* Info.plist */,
-				5A4B7DBD29F3A9A200CFB271 /* PlankImprover.xcdatamodeld */,
+				5A4B7DD729F448B300CFB271 /* GoogleService-Info.plist */,
 			);
 			path = PlankImprover;
+			sourceTree = "<group>";
+		};
+		5A4B7DCD29F3B8FD00CFB271 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				5A4B7DCF29F3BC7F00CFB271 /* LexendTera.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		5A4B7DD129F3E27600CFB271 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				5A4B7DD229F3E2B400CFB271 /* customBigButton.swift */,
+				5A4B7DD429F3F32900CFB271 /* LoginTextField.swift */,
+				5A4B7DF729F5587100CFB271 /* CircularProgressBar.swift */,
+				5A4B7E2229F77D2300CFB271 /* DayCollectionViewCell.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		5A4B7DD629F446F700CFB271 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A4B7DB829F3A9A200CFB271 /* LoginViewController.swift */,
+				5A4B7DCB29F3ABE600CFB271 /* LaunchViewController.swift */,
+				5A4B7DF529F534D600CFB271 /* TimerViewController.swift */,
+				5A4B7E2029F6FF7400CFB271 /* DaysCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5A4B7DE929F4D84100CFB271 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				5A4B7DE729F4D83300CFB271 /* FirebaseAuth.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		5A4B7E2729F7A16300CFB271 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A4B7DBD29F3A9A200CFB271 /* PlankImprover.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +164,12 @@
 			dependencies = (
 			);
 			name = PlankImprover;
+			packageProductDependencies = (
+				5A4B7DEB29F4E63F00CFB271 /* FirebaseAuth */,
+				5A4B7DED29F4E63F00CFB271 /* FirebaseDatabase */,
+				5A4B7DF029F4E68700CFB271 /* GoogleSignIn */,
+				5A4B7DF229F4E68700CFB271 /* GoogleSignInSwift */,
+			);
 			productName = PlankImprover;
 			productReference = 5A4B7DB129F3A9A200CFB271 /* PlankImprover.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +198,10 @@
 				Base,
 			);
 			mainGroup = 5A4B7DA829F3A9A200CFB271;
+			packageReferences = (
+				5A4B7DEA29F4E63F00CFB271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5A4B7DEF29F4E68700CFB271 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 5A4B7DB229F3A9A200CFB271 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,8 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A4B7DC429F3A9A400CFB271 /* LaunchScreen.storyboard in Resources */,
+				5A4B7DD829F448B300CFB271 /* GoogleService-Info.plist in Resources */,
 				5A4B7DC129F3A9A400CFB271 /* Assets.xcassets in Resources */,
-				5A4B7DBC29F3A9A200CFB271 /* Main.storyboard in Resources */,
+				5A4B7DD029F3BC7F00CFB271 /* LexendTera.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +230,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4B7DE829F4D83300CFB271 /* FirebaseAuth.swift in Sources */,
 				5A4B7DBF29F3A9A200CFB271 /* PlankImprover.xcdatamodeld in Sources */,
-				5A4B7DB929F3A9A200CFB271 /* ViewController.swift in Sources */,
+				5A4B7E2129F6FF7400CFB271 /* DaysCollectionViewController.swift in Sources */,
+				5A4B7DCC29F3ABE600CFB271 /* LaunchViewController.swift in Sources */,
+				5A4B7DB929F3A9A200CFB271 /* LoginViewController.swift in Sources */,
+				5A4B7DD329F3E2B400CFB271 /* customBigButton.swift in Sources */,
+				5A4B7DF629F534D600CFB271 /* TimerViewController.swift in Sources */,
+				5A4B7E2929FA424000CFB271 /* Errors.swift in Sources */,
+				5A4B7E2329F77D2300CFB271 /* DayCollectionViewCell.swift in Sources */,
 				5A4B7DB529F3A9A200CFB271 /* AppDelegate.swift in Sources */,
 				5A4B7DB729F3A9A200CFB271 /* SceneDelegate.swift in Sources */,
+				5A4B7DD529F3F32900CFB271 /* LoginTextField.swift in Sources */,
+				5A4B7DF829F5587100CFB271 /* CircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5A4B7DBA29F3A9A200CFB271 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A4B7DBB29F3A9A200CFB271 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5A4B7DC229F3A9A400CFB271 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -220,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,9 +385,9 @@
 				INFOPLIST_FILE = PlankImprover/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,9 +395,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kangajan.PlankImprover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,9 +415,9 @@
 				INFOPLIST_FILE = PlankImprover/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,9 +425,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kangajan.PlankImprover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -360,6 +456,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A4B7DEA29F4E63F00CFB271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.6.0;
+			};
+		};
+		5A4B7DEF29F4E68700CFB271 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A4B7DEB29F4E63F00CFB271 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A4B7DEA29F4E63F00CFB271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5A4B7DED29F4E63F00CFB271 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A4B7DEA29F4E63F00CFB271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		5A4B7DF029F4E68700CFB271 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A4B7DEF29F4E68700CFB271 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		5A4B7DF229F4E68700CFB271 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A4B7DEF29F4E68700CFB271 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5A4B7DBD29F3A9A200CFB271 /* PlankImprover.xcdatamodeld */ = {

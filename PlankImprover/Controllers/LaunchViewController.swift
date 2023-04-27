@@ -7,7 +7,10 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class LaunchViewController: UIViewController {
+    
+    let firebaseAuth = FirebaseAuth()
     
     lazy var backgroundImage:UIImageView = {
         var imageView = UIImageView()
@@ -35,6 +38,15 @@ class LaunchViewController: UIViewController {
 
         view.backgroundColor = .systemGreen
         setupBackground()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let isSiginIn = firebaseAuth.isUserLogin()
+        
+        if isSiginIn {
+            let viewController = DaysViewController()
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     private func setupBackground() {

@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
 class LoginViewController: UIViewController {
+    
+    var firebaseAuth = FirebaseAuth()
     
     lazy var loginTitle:UILabel = {
         var label = UILabel()
         label.text = "Log In"
         label.textColor = .black
-        label.font = UIFont(name: "LexendTera-ExtraBold", size: 30)
+        label.font = UIFont(name: "LexendTera-ExtraBold", size: 35)
         return label
     }()
     
@@ -47,24 +51,22 @@ class LoginViewController: UIViewController {
         var label = UILabel()
         label.text = "OR"
         label.textAlignment = .center
+        label.font = UIFont(name: "LexendTera-ExtraBold", size: 15)
         return label
     }()
     
-    lazy var googleSignInButton:UIButton = {
-        var button = UIButton()
-        button.backgroundColor = .clear
-        button.setImage(UIImage(imageLiteralResourceName: "googleIcon"), for: .normal)
-        button.layer.cornerRadius = 30
+    lazy var googleSignInButton:GIDSignInButton = {
+        var button = GIDSignInButton()
+        button.layer.cornerRadius = 15
         button.addTarget(.none, action: #selector(googleSignIn), for: .touchUpInside)
         return button
     }()
     
-    @objc func googleSignIn() {
-        //firebase Authentication
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         navigationItem.hidesBackButton = true
         
@@ -123,6 +125,44 @@ class LoginViewController: UIViewController {
         ])
     }
     
+    @objc func googleSignIn() {
+        //firebase Authentication
+            guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+            // Create Google Sign In configuration object.
+            let config = GIDConfiguration(clientID: clientID)
+            GIDSignIn.sharedInstance.configuration = config
+
+            // Start the sign in flow!
+            GIDSignIn.sharedInstance.signIn(withPresenting: self) {  result, error in
+                guard error == nil else {
+                    print("Google Sigin In Error, \(String(describing: error))")
+                    return
+                }
+
+                guard let user = result?.user,
+                      let idToken = user.idToken?.tokenString
+                else {
+                    print("User not Found , \(String(describing: error))")
+                    return
+                }
+
+                if #available(iOS 13.0, *) {
+                    Task {
+                        let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                                       accessToken: user.accessToken.tokenString)
+                        let authResult = try await Auth.auth().signIn(with: credential)
+                        guard authResult.user.email != nil else {
+                            return ()
+                        }
+                        let viewController = DaysViewController()
+                        self.navigationController?.pushViewController(viewController, animated: true)
+                    }
+                } else {
+                    // Fallback on earlier versions
+                }
+            }
+    }
     
 }
 
