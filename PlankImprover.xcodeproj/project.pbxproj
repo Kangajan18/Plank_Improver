@@ -17,7 +17,6 @@
 		5A4B7DD029F3BC7F00CFB271 /* LexendTera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7DCF29F3BC7F00CFB271 /* LexendTera.ttf */; };
 		5A4B7DD329F3E2B400CFB271 /* customBigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DD229F3E2B400CFB271 /* customBigButton.swift */; };
 		5A4B7DD529F3F32900CFB271 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DD429F3F32900CFB271 /* LoginTextField.swift */; };
-		5A4B7DD829F448B300CFB271 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7DD729F448B300CFB271 /* GoogleService-Info.plist */; };
 		5A4B7DE829F4D83300CFB271 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7DE729F4D83300CFB271 /* FirebaseAuth.swift */; };
 		5A4B7DEC29F4E63F00CFB271 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5A4B7DEB29F4E63F00CFB271 /* FirebaseAuth */; };
 		5A4B7DEE29F4E63F00CFB271 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5A4B7DED29F4E63F00CFB271 /* FirebaseDatabase */; };
@@ -28,6 +27,7 @@
 		5A4B7E2129F6FF7400CFB271 /* DaysCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2029F6FF7400CFB271 /* DaysCollectionViewController.swift */; };
 		5A4B7E2329F77D2300CFB271 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2229F77D2300CFB271 /* DayCollectionViewCell.swift */; };
 		5A4B7E2929FA424000CFB271 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2829FA424000CFB271 /* Errors.swift */; };
+		5A4B7E2D29FA48E800CFB271 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2C29FA48E800CFB271 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,13 +43,13 @@
 		5A4B7DCF29F3BC7F00CFB271 /* LexendTera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LexendTera.ttf; sourceTree = "<group>"; };
 		5A4B7DD229F3E2B400CFB271 /* customBigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customBigButton.swift; sourceTree = "<group>"; };
 		5A4B7DD429F3F32900CFB271 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
-		5A4B7DD729F448B300CFB271 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A4B7DE729F4D83300CFB271 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		5A4B7DF529F534D600CFB271 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		5A4B7DF729F5587100CFB271 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		5A4B7E2029F6FF7400CFB271 /* DaysCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysCollectionViewController.swift; sourceTree = "<group>"; };
 		5A4B7E2229F77D2300CFB271 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A4B7E2829FA424000CFB271 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		5A4B7E2C29FA48E800CFB271 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 				5A4B7DE929F4D84100CFB271 /* Firebase */,
 				5A4B7DC229F3A9A400CFB271 /* LaunchScreen.storyboard */,
 				5A4B7DC529F3A9A400CFB271 /* Info.plist */,
-				5A4B7DD729F448B300CFB271 /* GoogleService-Info.plist */,
+				5A4B7E2C29FA48E800CFB271 /* GoogleService-Info.plist */,
 			);
 			path = PlankImprover;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A4B7DC429F3A9A400CFB271 /* LaunchScreen.storyboard in Resources */,
-				5A4B7DD829F448B300CFB271 /* GoogleService-Info.plist in Resources */,
+				5A4B7E2D29FA48E800CFB271 /* GoogleService-Info.plist in Resources */,
 				5A4B7DC129F3A9A400CFB271 /* Assets.xcassets in Resources */,
 				5A4B7DD029F3BC7F00CFB271 /* LexendTera.ttf in Resources */,
 			);
