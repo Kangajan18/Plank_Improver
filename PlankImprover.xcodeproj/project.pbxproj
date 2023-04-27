@@ -28,6 +28,7 @@
 		5A4B7E2329F77D2300CFB271 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2229F77D2300CFB271 /* DayCollectionViewCell.swift */; };
 		5A4B7E2929FA424000CFB271 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2829FA424000CFB271 /* Errors.swift */; };
 		5A4B7E2D29FA48E800CFB271 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B7E2C29FA48E800CFB271 /* GoogleService-Info.plist */; };
+		5A4B7E3129FA7A7000CFB271 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7E3029FA7A7000CFB271 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5A4B7E2229F77D2300CFB271 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A4B7E2829FA424000CFB271 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5A4B7E2C29FA48E800CFB271 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A4B7E3029FA7A7000CFB271 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				5A4B7DCB29F3ABE600CFB271 /* LaunchViewController.swift */,
 				5A4B7DF529F534D600CFB271 /* TimerViewController.swift */,
 				5A4B7E2029F6FF7400CFB271 /* DaysCollectionViewController.swift */,
+				5A4B7E3029FA7A7000CFB271 /* UserInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A4B7DE829F4D83300CFB271 /* FirebaseAuth.swift in Sources */,
+				5A4B7E3129FA7A7000CFB271 /* UserInfoViewController.swift in Sources */,
 				5A4B7DBF29F3A9A200CFB271 /* PlankImprover.xcdatamodeld in Sources */,
 				5A4B7E2129F6FF7400CFB271 /* DaysCollectionViewController.swift in Sources */,
 				5A4B7DCC29F3ABE600CFB271 /* LaunchViewController.swift in Sources */,

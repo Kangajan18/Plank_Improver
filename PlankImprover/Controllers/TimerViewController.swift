@@ -74,7 +74,7 @@ class TimerViewController: UIViewController {
             if let currentDay = self?.day, let currentPlankTime = self?.plankTime{
                 self?.daysViewController.createNextDay(day: currentDay, second: currentPlankTime)
                 let dayViewController = DaysViewController()
-                self?.navigationController?.pushViewController(dayViewController, animated: true)
+                self?.navigationController?.pushViewController(dayViewController, animated: false)
             }
         }
         

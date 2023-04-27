@@ -155,7 +155,7 @@ class LoginViewController: UIViewController {
                         guard authResult.user.email != nil else {
                             return ()
                         }
-                        let viewController = DaysViewController()
+                        let viewController = UserInfoViewController()
                         self.navigationController?.pushViewController(viewController, animated: true)
                     }
                 } else {

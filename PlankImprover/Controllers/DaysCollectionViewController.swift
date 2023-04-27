@@ -14,16 +14,6 @@ class DaysViewController: UIViewController{
     var daysCollection = [Plank]()
     var selectedIndex:Int?
     
-    func initLoad() {
-        let plank = Plank(context: context)
-        plank.day = 1
-        plank.isDone = false
-        plank.second = 15
-        daysCollection.append(plank)
-        print("hello \(daysCollection.count)")
-        saveCoreData()
-    }
-    
     //save
     func saveCoreData() {
         do{
@@ -56,7 +46,9 @@ class DaysViewController: UIViewController{
         let nextPlank = Plank(context: context)
         nextPlank.day = Int16(day + 1)
         nextPlank.isDone = false
-        nextPlank.second = Int64(second + 1)
+        nextPlank.incrementSecond = daysCollection[daysCollection.count - 1].incrementSecond
+        nextPlank.initSecond = Int64(second + Int(nextPlank.incrementSecond))
+        
         daysCollection.append(nextPlank)
         dayCollectionView?.reloadData()
         print("created next Day \(daysCollection.count)")
@@ -87,13 +79,14 @@ class DaysViewController: UIViewController{
     
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        loadCoreData()
+        
         if daysCollection.isEmpty {
-            initLoad()
-            print("initial Load , start from day 1")
-        } else {
-            loadCoreData()
-            print("is my data",daysCollection.count)
+            var userInfoScreen = UserInfoViewController()
+            navigationController?.pushViewController(userInfoScreen, animated: false)
         }
+        
     }
     
     override func loadView() {
@@ -126,10 +119,9 @@ extension DaysViewController :UICollectionViewDataSource,UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("touched")
         let destinationVc = TimerViewController()
-        destinationVc.plankTime = Int(daysCollection[selectedIndex!].second)
-        destinationVc.circularViewDuration = TimeInterval(Int(daysCollection[selectedIndex!].second))
+        destinationVc.plankTime = Int(daysCollection[selectedIndex!].initSecond)
+        destinationVc.circularViewDuration = TimeInterval(Int(daysCollection[selectedIndex!].initSecond))
         destinationVc.day = Int(daysCollection[selectedIndex!].day)
         
         navigationController?.pushViewController(destinationVc, animated: true)
