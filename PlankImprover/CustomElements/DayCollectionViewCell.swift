@@ -29,10 +29,9 @@ class DayCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var date:UILabel = {
+    lazy var currentSecond:UILabel = {
         var label = UILabel()
-        label.text = "Apr 24 2023"
-        label.font = UIFont(name: "LexendTera-ExtraBold", size: 11)
+        label.font = UIFont(name: "LexendTera-ExtraBold", size: 14)
         return label
     }()
     
@@ -58,7 +57,7 @@ class DayCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor(red:10, green:10 ,blue:10 , alpha:0.50)
+        self.backgroundColor = .white
         setupCollectionViewCell()
     }
     
@@ -72,7 +71,7 @@ class DayCollectionViewCell: UICollectionViewCell {
         
         stackView.addArrangedSubview(titleStackView)
         stackView.addArrangedSubview(dayLabel)
-        stackView.addArrangedSubview(date)
+        stackView.addArrangedSubview(currentSecond)
         
         addSubview(stackView)
         

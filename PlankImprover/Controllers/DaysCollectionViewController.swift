@@ -6,45 +6,13 @@
 //
 
 import UIKit
-import CoreData
 
 @available(iOS 13.0, *)
 class DaysViewController: UIViewController{
     
+    //define properties
     var daysCollection = [Plank]()
     var selectedIndex:Int?
-    
-    func initLoad() {
-        let plank = Plank(context: context)
-        plank.day = 1
-        plank.isDone = false
-        plank.second = 15
-        daysCollection.append(plank)
-        print("hello \(daysCollection.count)")
-        saveCoreData()
-    }
-    
-    //save
-    func saveCoreData() {
-        do{
-            try context.save()
-            dayCollectionView?.reloadData()
-        }catch {
-            print("Error Occur while Save data , \(error)")
-        }
-    }
-    //load
-    func loadCoreData() {
-        
-        let request = NSFetchRequest<Plank>(entityName: "Plank")
-        
-        do{
-            daysCollection = try context.fetch(request)
-            dayCollectionView?.reloadData()
-        }catch{
-            print("Error occur while Load Data , \(error)")
-        }
-    }
     
     func createNextDay(day:Int,second:Int) {
         
@@ -54,12 +22,20 @@ class DaysViewController: UIViewController{
         
         //create new day
         let nextPlank = Plank(context: context)
+        nextPlank.keepDayCount = daysCollection[daysCollection.count - 1].keepDayCount - 1
         nextPlank.day = Int16(day + 1)
+        nextPlank.keepDay = daysCollection[daysCollection.count - 1].keepDay
         nextPlank.isDone = false
-        nextPlank.second = Int64(second + 1)
+        nextPlank.incrementSecond = daysCollection[daysCollection.count - 1].incrementSecond
+        if nextPlank.keepDayCount == 0 {
+            nextPlank.incrementSecond = daysCollection[daysCollection.count - 1].incrementSecond
+            nextPlank.initSecond = Int64(second + Int(nextPlank.incrementSecond))
+            nextPlank.keepDayCount = nextPlank.keepDay
+        } else {
+            nextPlank.initSecond = Int64(second)
+        }
         daysCollection.append(nextPlank)
         dayCollectionView?.reloadData()
-        print("created next Day \(daysCollection.count)")
         saveCoreData()
     }
     
@@ -72,28 +48,24 @@ class DaysViewController: UIViewController{
         
         navigationController?.isNavigationBarHidden = true
         
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         dayCollectionView?.dataSource = self
         dayCollectionView?.delegate = self
         dayCollectionView?.alwaysBounceVertical = true
         dayCollectionView?.register(DayCollectionViewCell.self, forCellWithReuseIdentifier: "daysCollection")
         
-        
         loadCoreData()
-        
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor(red:0.0, green:0.50 ,blue:0.47 , alpha:0.47)
+        view.backgroundColor = .black
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
+        loadCoreData()
+        
         if daysCollection.isEmpty {
-            initLoad()
-            print("initial Load , start from day 1")
-        } else {
-            loadCoreData()
-            print("is my data",daysCollection.count)
+            let userInfoScreen = UserInfoViewController()
+            navigationController?.pushViewController(userInfoScreen, animated: false)
         }
+        
     }
     
     override func loadView() {
@@ -105,35 +77,4 @@ class DaysViewController: UIViewController{
         dayCollectionView = UICollectionView(frame: .zero,collectionViewLayout: layout)
         self.view = dayCollectionView
     }
-}
-
-//MARK: - UICollectionView DataSource
-@available(iOS 13.0, *)
-extension DaysViewController :UICollectionViewDataSource,UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("coun t= \(daysCollection.count)")
-        return daysCollection.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "daysCollection", for: indexPath) as! DayCollectionViewCell
-        selectedIndex = indexPath.item
-        cell.setupDayLabel(labelText: String(daysCollection[indexPath.row].day))
-        cell.plankComplete(isComplete: daysCollection[indexPath.row].isDone)
-        return cell
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("touched")
-        let destinationVc = TimerViewController()
-        destinationVc.plankTime = Int(daysCollection[selectedIndex!].second)
-        destinationVc.circularViewDuration = TimeInterval(Int(daysCollection[selectedIndex!].second))
-        destinationVc.day = Int(daysCollection[selectedIndex!].day)
-        
-        navigationController?.pushViewController(destinationVc, animated: true)
-    }
-    
-    
 }

@@ -17,7 +17,6 @@ struct FirebaseAuth {
             guard Auth.auth().currentUser != nil else {
                 throw Errors.runtimeError("user Not SignOut, Error")
             }
-            print("Email = \(Auth.auth().currentUser?.email)")
             return (true)
         } catch {
             return (false)
