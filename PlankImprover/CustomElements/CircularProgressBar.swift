@@ -20,8 +20,6 @@ class CircularProgressBarView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         createCircularPath()
-        print("start point =\(startPoint)")
-        print("End point =\(endPoint)")
     }
     
     required init?(coder: NSCoder) {

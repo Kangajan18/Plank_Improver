@@ -57,7 +57,7 @@ class DayCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor(red:10, green:10 ,blue:10 , alpha:0.50)
+        self.backgroundColor = .white
         setupCollectionViewCell()
     }
     

@@ -10,8 +10,10 @@ import UIKit
 @available(iOS 13.0, *)
 class LaunchViewController: UIViewController {
     
+    //create firebaseAuth object
     let firebaseAuth = FirebaseAuth()
     
+    //define UIElements
     lazy var backgroundImage:UIImageView = {
         var imageView = UIImageView()
         imageView.image = UIImage(imageLiteralResourceName: "launcherBackgroundImage")
@@ -38,6 +40,9 @@ class LaunchViewController: UIViewController {
 
         view.backgroundColor = .systemGreen
         setupBackground()
+        
+        //set button target
+        bottomButton.addTarget(.none, action: #selector(launchButtonPressed), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,49 +53,9 @@ class LaunchViewController: UIViewController {
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
-    
-    private func setupBackground() {
-        view.addSubview(backgroundImage)
-        view.addSubview(titleLabel)
-        view.addSubview(bottomButton)
-        
-        bottomButton.addTarget(.none, action: #selector(launchButtonPressed), for: .touchUpInside)
-                        
-        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        bottomButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor),
-            backgroundImage.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundImage.rightAnchor.constraint(equalTo: view.rightAnchor),
-            backgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
-            titleLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor,constant: 20),
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 25),
-            titleLabel.widthAnchor.constraint(equalToConstant: 300),
-            titleLabel.heightAnchor.constraint(equalToConstant: 150),
-            
-            bottomButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor,constant: 70),
-            bottomButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,constant: -70),
-            bottomButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -40),
-            bottomButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
-    }
-    
+
     @objc private func launchButtonPressed() {
         let nextSecreenVc = LoginViewController()
         navigationController?.pushViewController(nextSecreenVc, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
