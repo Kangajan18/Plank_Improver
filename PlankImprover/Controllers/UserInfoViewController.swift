@@ -32,17 +32,17 @@ class UserInfoViewController: UIViewController {
         var label = UILabel()
         label.text = "welcome to Plank Improver, this app going make a huge difference into your life."
         label.textColor = .white
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         label.textAlignment = .center
-        label.font = UIFont(name: "LexendTera-ExtraLight", size: 10)
+        label.font = UIFont(name: "LexendTera-ExtraLight", size: 14)
         return label
     }()
     
     lazy var questionOneTextField:UITextField = {
         var textField = UITextField()
         textField.textColor = .black
-        textField.font = UIFont.systemFont(ofSize: 16)
-        textField.placeholder = "How much seconds your can be in Plank now?"
+        textField.font = UIFont.systemFont(ofSize: 12)
+        textField.text = "How much seconds your can be in Plank now?"
         textField.backgroundColor = .white
         textField.textAlignment = .center
         textField.layer.cornerRadius = 5
@@ -56,8 +56,8 @@ class UserInfoViewController: UIViewController {
     lazy var questionTwoTextField:UITextField = {
         var textField = UITextField()
         textField.textColor = .black
-        textField.font = UIFont.systemFont(ofSize: 16)
-        textField.placeholder = "How many seconds would you like to increase for next Plank?"
+        textField.font = UIFont.systemFont(ofSize: 12)
+        textField.text = "How many seconds would you like to increase for next Plank?"
         textField.backgroundColor = .white
         textField.textAlignment = .center
         textField.layer.cornerRadius = 5
@@ -72,8 +72,8 @@ class UserInfoViewController: UIViewController {
     lazy var questionThreeTextField:UITextField = {
         var textField = UITextField()
         textField.textColor = .black
-        textField.font = UIFont.systemFont(ofSize: 16)
-        textField.placeholder = "How many days you want to keep same time limit?"
+        textField.font = UIFont.systemFont(ofSize: 12)
+        textField.text = "How many days you want to keep same time limit?"
         textField.backgroundColor = .white
         textField.textAlignment = .center
         textField.layer.cornerRadius = 5
@@ -101,10 +101,11 @@ class UserInfoViewController: UIViewController {
         plank.incrementSecond = Int16(nextPlankIncrement!)
         plank.initSecond = Int64(plankTime!)
         plank.keepDay = Int16(keepDay!)
+        plank.keepDayCount = Int16(keepDay!)
         plank.isDone = false
         saveCoreData()
         
-        var nextScreen = DaysViewController()
+        let nextScreen = DaysViewController()
         navigationController?.pushViewController(nextScreen, animated: false)
     }
     
@@ -140,6 +141,7 @@ class UserInfoViewController: UIViewController {
         questionThreeTextField.translatesAutoresizingMaskIntoConstraints = false
         submitButton.translatesAutoresizingMaskIntoConstraints = false
         
+        
         questionOneTextField.inputView = questionOnePickerView
         questionOnePickerView.delegate = self
         questionOnePickerView.dataSource = self
@@ -164,7 +166,7 @@ class UserInfoViewController: UIViewController {
             screenSubTitle.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor,constant: 20),
             screenSubTitle.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,constant: -20),
             screenSubTitle.topAnchor.constraint(equalTo: screenTitle.bottomAnchor,constant: 10),
-            screenSubTitle.heightAnchor.constraint(equalToConstant: 30),
+            screenSubTitle.heightAnchor.constraint(equalToConstant: 60),
             
             questionOneTextField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor,constant: 10),
             questionOneTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,constant: -10),
@@ -182,7 +184,7 @@ class UserInfoViewController: UIViewController {
             questionThreeTextField.heightAnchor.constraint(equalToConstant: 40),
             
             submitButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            submitButton.topAnchor.constraint(equalTo: questionThreeTextField.bottomAnchor,constant: 150),
+            submitButton.topAnchor.constraint(equalTo: questionThreeTextField.bottomAnchor,constant: 80),
             submitButton.heightAnchor.constraint(equalToConstant: 50),
             submitButton.widthAnchor.constraint(equalToConstant: 250),
         ])

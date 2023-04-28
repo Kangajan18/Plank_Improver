@@ -44,14 +44,20 @@ class DaysViewController: UIViewController{
         
         //create new day
         let nextPlank = Plank(context: context)
+        nextPlank.keepDayCount = daysCollection[daysCollection.count - 1].keepDayCount - 1
         nextPlank.day = Int16(day + 1)
+        nextPlank.keepDay = daysCollection[daysCollection.count - 1].keepDay
         nextPlank.isDone = false
         nextPlank.incrementSecond = daysCollection[daysCollection.count - 1].incrementSecond
-        nextPlank.initSecond = Int64(second + Int(nextPlank.incrementSecond))
-        
+        if nextPlank.keepDayCount == 0 {
+            nextPlank.incrementSecond = daysCollection[daysCollection.count - 1].incrementSecond
+            nextPlank.initSecond = Int64(second + Int(nextPlank.incrementSecond))
+            nextPlank.keepDayCount = nextPlank.keepDay
+        } else {
+            nextPlank.initSecond = Int64(second)
+        }
         daysCollection.append(nextPlank)
         dayCollectionView?.reloadData()
-        print("created next Day \(daysCollection.count)")
         saveCoreData()
     }
     
@@ -74,7 +80,7 @@ class DaysViewController: UIViewController{
         loadCoreData()
         
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor(red:0.0, green:0.50 ,blue:0.47 , alpha:0.47)
+        view.backgroundColor = .black
     }
     
     
@@ -83,7 +89,7 @@ class DaysViewController: UIViewController{
         loadCoreData()
         
         if daysCollection.isEmpty {
-            var userInfoScreen = UserInfoViewController()
+            let userInfoScreen = UserInfoViewController()
             navigationController?.pushViewController(userInfoScreen, animated: false)
         }
         
@@ -105,7 +111,6 @@ class DaysViewController: UIViewController{
 extension DaysViewController :UICollectionViewDataSource,UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("coun t= \(daysCollection.count)")
         return daysCollection.count
     }
     
@@ -114,6 +119,7 @@ extension DaysViewController :UICollectionViewDataSource,UICollectionViewDelegat
         selectedIndex = indexPath.item
         cell.setupDayLabel(labelText: String(daysCollection[indexPath.row].day))
         cell.plankComplete(isComplete: daysCollection[indexPath.row].isDone)
+        cell.currentSecond.text = "\(daysCollection[indexPath.row].initSecond) Sec"
         return cell
         
     }
